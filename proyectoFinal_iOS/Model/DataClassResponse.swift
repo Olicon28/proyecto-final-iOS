@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct DataClassResponse: Codable {
+    
+    let user: UserResponse
+    let token: String
+    
+}

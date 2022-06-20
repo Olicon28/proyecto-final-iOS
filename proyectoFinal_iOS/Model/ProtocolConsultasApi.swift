@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+protocol ProtocolConsultasApi {
+    
+    func getAuthMe()
+    func registerUser(name:String, email:String, password:String, complete:@escaping (_ code:Int, _ message:String) -> ())
+}

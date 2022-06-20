@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct RegistryResponse: Codable {
+    
+    let success: Bool?
+    let data: DataClassResponse?
+    let message: String
+    let errors: ErrorsResponse?
+    
+}

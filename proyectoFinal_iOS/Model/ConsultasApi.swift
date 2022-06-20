@@ -6,30 +6,80 @@
 //
 
 import Foundation
+import UIKit
 import Alamofire
 
-class ConsultasApi {
+class ConsultasApi:ProtocolConsultasApi {
+    
+    //MARK: Singleton
+    static var shared = ConsultasApi()
 
     func getAuthMe() {
-        
-        AF.request("https://ongapi.alkemy.org/api/auth/me").response {respuesta in
-                    debugPrint(respuesta)
-            guard let data = respuesta.data else {
-                        print("no hay data")
-                        return
-                
+            
+            AF.request("https://ongapi.alkemy.org/api/auth/me").response {respuesta in
+                        debugPrint(respuesta)
+                guard let data = respuesta.data else {
+                            print("no hay data")
+                            return
+                    
+                }
+                do {
+                    let result = try JSONDecoder().decode(LoginAuthenticated.self, from: data)
+                            //print(result)
+                    print(result.success)
+                    print(result.error)
+
+                }
+                catch let error {
+                    print("Se produjo un error: \(error)")
+                    
+                }
             }
+        }
+        
+    func registerUser(name:String, email:String, password:String, complete:@escaping (_ code:Int, _ message:String) -> ()) {
+        
+        let pURL:String = "https://ongapi.alkemy.org/api/register"
+        
+        let headers: HTTPHeaders = [
+            "Accept": "application/json"
+        ]
+            
+        let parameters: [String: String] = [
+            "name" : name,
+            "email" : email,
+            "password" : password,
+        ]
+        
+        AF.request(pURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: headers).response {response in
+            
+            if response.error != nil {
+                complete(1,"se encontro un error")
+                return
+            }
+            
+            guard let data = response.data else {
+                complete(2,"sin datos")
+                return
+            }
+            
             do {
-                let result = try JSONDecoder().decode([LoginAuthenticated].self, from: data)
-                        //print(result)
-                result.forEach { LoUser in
-                    print(LoUser.success)
-                    print(LoUser.error)
+                let registryResponse = try JSONDecoder().decode(RegistryResponse.self, from:data)
+                print("success: \(registryResponse.success ?? false)")
+                print("message: \(registryResponse.message)")
+                print("errors : \(registryResponse.errors)")
+                print("data   : \(registryResponse.data)")
+                
+                if (registryResponse.success ?? false) {
+                    complete(0,registryResponse.message)
+                }
+                else
+                {
+                    complete(-1,registryResponse.message)
                 }
             }
             catch let error {
-                print("Se produjo un error: \(error)")
-                
+                complete(3,"error al leer contenido \(error)")
             }
         }
     }

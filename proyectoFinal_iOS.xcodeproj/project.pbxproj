@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		512A9CD8285C33C600034C3D /* RegistryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A9CD7285C33C600034C3D /* RegistryResponse.swift */; };
+		512A9CDA285C344B00034C3D /* DataClassResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A9CD9285C344B00034C3D /* DataClassResponse.swift */; };
+		512A9CDC285C346F00034C3D /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A9CDB285C346F00034C3D /* UserResponse.swift */; };
+		512A9CDE285C34A300034C3D /* ErrorsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A9CDD285C34A300034C3D /* ErrorsResponse.swift */; };
+		512D09F9285A92DE00CE7A0E /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512D09F8285A92DE00CE7A0E /* RegistroViewController.swift */; };
+		512D0A00285B8DEC00CE7A0E /* LoginAuthenticated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512D09FF285B8DEC00CE7A0E /* LoginAuthenticated.swift */; };
+		512D0A04285B8E6D00CE7A0E /* ConsultasApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512D0A03285B8E6D00CE7A0E /* ConsultasApi.swift */; };
+		512D0A06285B8E7300CE7A0E /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512D0A05285B8E7300CE7A0E /* LoginUser.swift */; };
+		512D0A08285B8F2400CE7A0E /* ProtocolConsultasApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512D0A07285B8F2400CE7A0E /* ProtocolConsultasApi.swift */; };
 		515989172859258000FD3FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515989162859258000FD3FE7 /* AppDelegate.swift */; };
 		515989192859258000FD3FE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515989182859258000FD3FE7 /* SceneDelegate.swift */; };
 		5159891B2859258000FD3FE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5159891A2859258000FD3FE7 /* ViewController.swift */; };
@@ -19,6 +28,15 @@
 
 /* Begin PBXFileReference section */
 		452504F1007DF47ADD15CDBA /* Pods-proyectoFinal_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proyectoFinal_iOS.debug.xcconfig"; path = "Target Support Files/Pods-proyectoFinal_iOS/Pods-proyectoFinal_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		512A9CD7285C33C600034C3D /* RegistryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistryResponse.swift; sourceTree = "<group>"; };
+		512A9CD9285C344B00034C3D /* DataClassResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataClassResponse.swift; sourceTree = "<group>"; };
+		512A9CDB285C346F00034C3D /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		512A9CDD285C34A300034C3D /* ErrorsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsResponse.swift; sourceTree = "<group>"; };
+		512D09F8285A92DE00CE7A0E /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
+		512D09FF285B8DEC00CE7A0E /* LoginAuthenticated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthenticated.swift; sourceTree = "<group>"; };
+		512D0A03285B8E6D00CE7A0E /* ConsultasApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultasApi.swift; sourceTree = "<group>"; };
+		512D0A05285B8E7300CE7A0E /* LoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
+		512D0A07285B8F2400CE7A0E /* ProtocolConsultasApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolConsultasApi.swift; sourceTree = "<group>"; };
 		515989132859258000FD3FE7 /* proyectoFinal_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proyectoFinal_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		515989162859258000FD3FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		515989182859258000FD3FE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +70,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		512D09FC285B8DDE00CE7A0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				512D0A03285B8E6D00CE7A0E /* ConsultasApi.swift */,
+				512D0A05285B8E7300CE7A0E /* LoginUser.swift */,
+				512D09FF285B8DEC00CE7A0E /* LoginAuthenticated.swift */,
+				512D0A07285B8F2400CE7A0E /* ProtocolConsultasApi.swift */,
+				512A9CD7285C33C600034C3D /* RegistryResponse.swift */,
+				512A9CD9285C344B00034C3D /* DataClassResponse.swift */,
+				512A9CDB285C346F00034C3D /* UserResponse.swift */,
+				512A9CDD285C34A300034C3D /* ErrorsResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5159890A2859258000FD3FE7 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +106,7 @@
 		515989152859258000FD3FE7 /* proyectoFinal_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				512D09FC285B8DDE00CE7A0E /* Model */,
 				CBDCDA1828598622008D89FB /* Controller */,
 				515989162859258000FD3FE7 /* AppDelegate.swift */,
 				515989182859258000FD3FE7 /* SceneDelegate.swift */,
@@ -98,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				CBDCDA1A28598675008D89FB /* LoginViewController.swift */,
+				512D09F8285A92DE00CE7A0E /* RegistroViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,8 +254,17 @@
 			files = (
 				CBDCDA1B28598675008D89FB /* LoginViewController.swift in Sources */,
 				5159891B2859258000FD3FE7 /* ViewController.swift in Sources */,
+				512A9CDA285C344B00034C3D /* DataClassResponse.swift in Sources */,
+				512D0A06285B8E7300CE7A0E /* LoginUser.swift in Sources */,
 				515989172859258000FD3FE7 /* AppDelegate.swift in Sources */,
+				512D0A08285B8F2400CE7A0E /* ProtocolConsultasApi.swift in Sources */,
+				512D09F9285A92DE00CE7A0E /* RegistroViewController.swift in Sources */,
 				515989192859258000FD3FE7 /* SceneDelegate.swift in Sources */,
+				512D0A04285B8E6D00CE7A0E /* ConsultasApi.swift in Sources */,
+				512D0A00285B8DEC00CE7A0E /* LoginAuthenticated.swift in Sources */,
+				512A9CD8285C33C600034C3D /* RegistryResponse.swift in Sources */,
+				512A9CDE285C34A300034C3D /* ErrorsResponse.swift in Sources */,
+				512A9CDC285C346F00034C3D /* UserResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,8 +412,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = proyectoFinal_iOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Somos MAS";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -397,8 +443,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = proyectoFinal_iOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Somos MAS";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
