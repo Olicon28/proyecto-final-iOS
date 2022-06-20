@@ -6,6 +6,12 @@
 //
 
 import UIKit
+import Alamofire
+
+enum LoginAction{
+    case OK
+    case Failure
+}
 
 class LoginViewController: UIViewController {
 
@@ -17,6 +23,10 @@ class LoginViewController: UIViewController {
     
     var passwordIsOk : Bool = false
     var emailIsOk : Bool = false
+    var email : String = ""
+    var password : String = ""
+    var userName : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         resetForm()
@@ -101,14 +111,130 @@ class LoginViewController: UIViewController {
         errorEmailLabel.isHidden = true
         errorPasswordLabel.isHidden = true
     }
-    /*
-    // MARK: - Navigation
+    @IBAction func onTapLogin(_ sender: Any) {
+        
+        print("Entra OnTapLogin")
+        
+        if (emailIsOk && passwordIsOk) {
+            
+            guard let emailSelf = emailTextField.text else {
+                return
+            }
+            
+            guard let passwordSelf = passwordTextField.text else{
+                return
+            }
+            
+            let headers: HTTPHeaders = [
+                "Accept": "application/json"
+            ]
+            
+            let loginRequest = LoginRequest(email: emailSelf, password: passwordSelf)
+            
+            print("loginRequest_: " , loginRequest)
+            
+            
+            AF.request(EndPonints.login, method: .post, parameters: loginRequest, encoder: JSONParameterEncoder.default, headers: headers).response { response in
+                
+                print ("response:")
+                debugPrint(response)
+                
+                if response.error != nil {
+                    print("se encontró un error")
+                    return
+                }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+                guard let data = response.data else {
+                    print("sin datos")
+                    return
+                }
+                
+                do {
+                    let loginResponse = try JSONDecoder().decode(LoginResponse.self, from: data)
+                    
+                    print("*** resultado ***\n")
+                    print("success: \(loginResponse.success ?? false)")
+                    print("message: \(loginResponse.message)")
+                    print("data   : \(loginResponse.data)")
+                    
+   
+                    
+                    self.userName = loginResponse.data?.user.name ?? ""
+                    
+                    
+                    if (loginResponse.success ?? false) {
+                        
+                        let alert = UIAlertController(title: "Login", message: "\(self.userName), bienvenido a nuestra app", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Ok" , style: .default, handler: { action in
+                            switch action.style{
+                                case .default:
+                                    self.performSegue(withIdentifier: "segueToHome", sender: nil)
+                                
+                                case .cancel:
+                                    print("")
+                                    
+                                case .destructive:
+                                    print("")
+                                    
+                                @unknown default:
+                                    print("")
+                                
+                            }
+                        }))
+                        self.present(alert, animated: true, completion: nil)
+                        
+                    }else{
+                        let alert = UIAlertController(title: "Login", message: "No hay registro con este usuario y contraseña", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Ok" , style: .default, handler: { action in
+                            switch action.style{
+                                
+                                case .default:
+                                    print("")
+                                
+                                case .cancel:
+                                    print("")
+                                    
+                                case .destructive:
+                                    print("")
+                                    
+                                @unknown default:
+                                    print("")
+                            }
+                        }))
+                        self.present(alert, animated: true, completion: nil)
+                        
+                    }
+                } catch let error {
+                    
+                    let alert = UIAlertController(title: "Login", message: "Ha ocurrido un error", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok" , style: .default, handler: { action in
+                        switch action.style{
+                            case .default:
+                                print("")
+                            
+                            case .cancel:
+                                print("")
+                                
+                            case .destructive:
+                                print("")
+                                
+                            @unknown default:
+                                print("")
+                            
+                        }
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+                    
+                   
+                }
+             }
+            
+            
+            
+         
+        }
+        
     }
-    */
+    
 
 }
