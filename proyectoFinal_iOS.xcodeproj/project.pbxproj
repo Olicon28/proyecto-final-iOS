@@ -14,6 +14,12 @@
 		515989202859258100FD3FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5159891F2859258100FD3FE7 /* Assets.xcassets */; };
 		515989232859258100FD3FE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 515989212859258100FD3FE7 /* LaunchScreen.storyboard */; };
 		5C89675C04D5B9077CAFE4A6 /* Pods_proyectoFinal_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518B53F1D5EA93EFC89E11C3 /* Pods_proyectoFinal_iOS.framework */; };
+		CB4DC05A285C1B0B00DCE0B5 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DC059285C1B0B00DCE0B5 /* LoginResponse.swift */; };
+		CB4DC05F285C1BA600DCE0B5 /* LoginRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DC05E285C1BA600DCE0B5 /* LoginRequests.swift */; };
+		CB4DC062285C1C0600DCE0B5 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DC061285C1C0600DCE0B5 /* EndPoints.swift */; };
+		CB4DC064285CCEDA00DCE0B5 /* DataUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DC063285CCEDA00DCE0B5 /* DataUserResponse.swift */; };
+		CB4DC066285CE26E00DCE0B5 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DC065285CE26E00DCE0B5 /* UserResponse.swift */; };
+		CB4DC06A285D771D00DCE0B5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DC069285D771D00DCE0B5 /* HomeViewController.swift */; };
 		CBDCDA1B28598675008D89FB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCDA1A28598675008D89FB /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +35,12 @@
 		515989242859258100FD3FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		518B53F1D5EA93EFC89E11C3 /* Pods_proyectoFinal_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_proyectoFinal_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E906061ED1A9E80169A2C2 /* Pods-proyectoFinal_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proyectoFinal_iOS.release.xcconfig"; path = "Target Support Files/Pods-proyectoFinal_iOS/Pods-proyectoFinal_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		CB4DC059285C1B0B00DCE0B5 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		CB4DC05E285C1BA600DCE0B5 /* LoginRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequests.swift; sourceTree = "<group>"; };
+		CB4DC061285C1C0600DCE0B5 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		CB4DC063285CCEDA00DCE0B5 /* DataUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUserResponse.swift; sourceTree = "<group>"; };
+		CB4DC065285CE26E00DCE0B5 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		CB4DC069285D771D00DCE0B5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CBDCDA1A28598675008D89FB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +85,8 @@
 		515989152859258000FD3FE7 /* proyectoFinal_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CB4DC057285C1AD000DCE0B5 /* Models */,
+				CB4DC054285BDC4700DCE0B5 /* Helper */,
 				CBDCDA1828598622008D89FB /* Controller */,
 				515989162859258000FD3FE7 /* AppDelegate.swift */,
 				515989182859258000FD3FE7 /* SceneDelegate.swift */,
@@ -94,10 +108,54 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CB4DC054285BDC4700DCE0B5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		CB4DC057285C1AD000DCE0B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB4DC060285C1BF400DCE0B5 /* Commons */,
+				CB4DC05D285C1B9000DCE0B5 /* Requests */,
+				CB4DC058285C1ADF00DCE0B5 /* Responses */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CB4DC058285C1ADF00DCE0B5 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				CB4DC059285C1B0B00DCE0B5 /* LoginResponse.swift */,
+				CB4DC063285CCEDA00DCE0B5 /* DataUserResponse.swift */,
+				CB4DC065285CE26E00DCE0B5 /* UserResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		CB4DC05D285C1B9000DCE0B5 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				CB4DC05E285C1BA600DCE0B5 /* LoginRequests.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		CB4DC060285C1BF400DCE0B5 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				CB4DC061285C1C0600DCE0B5 /* EndPoints.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		CBDCDA1828598622008D89FB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				CBDCDA1A28598675008D89FB /* LoginViewController.swift */,
+				CB4DC069285D771D00DCE0B5 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,7 +277,13 @@
 			files = (
 				CBDCDA1B28598675008D89FB /* LoginViewController.swift in Sources */,
 				5159891B2859258000FD3FE7 /* ViewController.swift in Sources */,
+				CB4DC05A285C1B0B00DCE0B5 /* LoginResponse.swift in Sources */,
 				515989172859258000FD3FE7 /* AppDelegate.swift in Sources */,
+				CB4DC066285CE26E00DCE0B5 /* UserResponse.swift in Sources */,
+				CB4DC05F285C1BA600DCE0B5 /* LoginRequests.swift in Sources */,
+				CB4DC06A285D771D00DCE0B5 /* HomeViewController.swift in Sources */,
+				CB4DC064285CCEDA00DCE0B5 /* DataUserResponse.swift in Sources */,
+				CB4DC062285C1C0600DCE0B5 /* EndPoints.swift in Sources */,
 				515989192859258000FD3FE7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
