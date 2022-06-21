@@ -210,7 +210,7 @@ class LoginViewController: UIViewController {
                     alert.addAction(UIAlertAction(title: "Ok" , style: .default, handler: { action in
                         switch action.style{
                             case .default:
-                                print("")
+                                print(error)
                             
                             case .cancel:
                                 print("")
