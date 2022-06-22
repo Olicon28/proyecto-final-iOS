@@ -7,4 +7,5 @@ target 'proyectoFinal_iOS' do
 
   # Pods for proyectoFinal_iOS
   pod 'Alamofire'
+  pod 'AlamofireImage'
 end
