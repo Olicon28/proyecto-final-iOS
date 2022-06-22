@@ -24,6 +24,9 @@
 		51EEE5672863B00500EAD5E5 /* StructNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEE5642863B00500EAD5E5 /* StructNews.swift */; };
 		51EEE5682863B00500EAD5E5 /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEE5652863B00500EAD5E5 /* NewsResponse.swift */; };
 		5C89675C04D5B9077CAFE4A6 /* Pods_proyectoFinal_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518B53F1D5EA93EFC89E11C3 /* Pods_proyectoFinal_iOS.framework */; };
+		86D6B6792863D15D008BF8DD /* ContactanosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6B6782863D15D008BF8DD /* ContactanosViewController.swift */; };
+		86D6B67B2863D376008BF8DD /* ContactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6B67A2863D376008BF8DD /* ContactResponse.swift */; };
+		86D6B67D2863D3F6008BF8DD /* DataContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6B67C2863D3F6008BF8DD /* DataContact.swift */; };
 		CB4DC05A285C1B0B00DCE0B5 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DC059285C1B0B00DCE0B5 /* LoginResponse.swift */; };
 		CB4DC05F285C1BA600DCE0B5 /* LoginRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DC05E285C1BA600DCE0B5 /* LoginRequests.swift */; };
 		CB4DC062285C1C0600DCE0B5 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DC061285C1C0600DCE0B5 /* EndPoints.swift */; };
@@ -54,6 +57,9 @@
 		51EEE5632863B00500EAD5E5 /* ProtocolNewsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolNewsResponse.swift; sourceTree = "<group>"; };
 		51EEE5642863B00500EAD5E5 /* StructNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructNews.swift; sourceTree = "<group>"; };
 		51EEE5652863B00500EAD5E5 /* NewsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
+		86D6B6782863D15D008BF8DD /* ContactanosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactanosViewController.swift; sourceTree = "<group>"; };
+		86D6B67A2863D376008BF8DD /* ContactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactResponse.swift; sourceTree = "<group>"; };
+		86D6B67C2863D3F6008BF8DD /* DataContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContact.swift; sourceTree = "<group>"; };
 		90E906061ED1A9E80169A2C2 /* Pods-proyectoFinal_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proyectoFinal_iOS.release.xcconfig"; path = "Target Support Files/Pods-proyectoFinal_iOS/Pods-proyectoFinal_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		CB4DC059285C1B0B00DCE0B5 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		CB4DC05E285C1BA600DCE0B5 /* LoginRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequests.swift; sourceTree = "<group>"; };
@@ -159,6 +165,8 @@
 				CB4DC059285C1B0B00DCE0B5 /* LoginResponse.swift */,
 				CB4DC063285CCEDA00DCE0B5 /* DataUserResponse.swift */,
 				CB4DC065285CE26E00DCE0B5 /* UserResponse.swift */,
+				86D6B67A2863D376008BF8DD /* ContactResponse.swift */,
+				86D6B67C2863D3F6008BF8DD /* DataContact.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -184,6 +192,7 @@
 			children = (
 				51EEE5612863AF9B00EAD5E5 /* NovedadesViewController.swift */,
 				51253DE128617DC3008B1487 /* RegistroViewController.swift */,
+				86D6B6782863D15D008BF8DD /* ContactanosViewController.swift */,
 				CBDCDA1A28598675008D89FB /* LoginViewController.swift */,
 				CB4DC069285D771D00DCE0B5 /* HomeViewController.swift */,
 			);
@@ -308,16 +317,19 @@
 				CBDCDA1B28598675008D89FB /* LoginViewController.swift in Sources */,
 				51EEE5682863B00500EAD5E5 /* NewsResponse.swift in Sources */,
 				51EEE5662863B00500EAD5E5 /* ProtocolNewsResponse.swift in Sources */,
+				86D6B67B2863D376008BF8DD /* ContactResponse.swift in Sources */,
 				5159891B2859258000FD3FE7 /* ViewController.swift in Sources */,
 				CB4DC05A285C1B0B00DCE0B5 /* LoginResponse.swift in Sources */,
 				515989172859258000FD3FE7 /* AppDelegate.swift in Sources */,
 				CB4DC066285CE26E00DCE0B5 /* UserResponse.swift in Sources */,
 				51EEE5672863B00500EAD5E5 /* StructNews.swift in Sources */,
 				51253DEB28617F74008B1487 /* ConsultasApi.swift in Sources */,
+				86D6B67D2863D3F6008BF8DD /* DataContact.swift in Sources */,
 				CB4DC05F285C1BA600DCE0B5 /* LoginRequests.swift in Sources */,
 				51EEE5622863AF9B00EAD5E5 /* NovedadesViewController.swift in Sources */,
 				CB4DC06A285D771D00DCE0B5 /* HomeViewController.swift in Sources */,
 				CB4DC064285CCEDA00DCE0B5 /* DataUserResponse.swift in Sources */,
+				86D6B6792863D15D008BF8DD /* ContactanosViewController.swift in Sources */,
 				51253DED28617F74008B1487 /* RegistryResponse.swift in Sources */,
 				CB4DC062285C1C0600DCE0B5 /* EndPoints.swift in Sources */,
 				515989192859258000FD3FE7 /* SceneDelegate.swift in Sources */,
