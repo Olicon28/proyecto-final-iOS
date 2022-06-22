@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51253DE228617DC3008B1487 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51253DE128617DC3008B1487 /* RegistroViewController.swift */; };
+		51253DE928617F74008B1487 /* ErrorsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51253DE428617F74008B1487 /* ErrorsResponse.swift */; };
+		51253DEA28617F74008B1487 /* DataClassResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51253DE528617F74008B1487 /* DataClassResponse.swift */; };
+		51253DEB28617F74008B1487 /* ConsultasApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51253DE628617F74008B1487 /* ConsultasApi.swift */; };
+		51253DEC28617F74008B1487 /* ProtocolConsultasApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51253DE728617F74008B1487 /* ProtocolConsultasApi.swift */; };
+		51253DED28617F74008B1487 /* RegistryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51253DE828617F74008B1487 /* RegistryResponse.swift */; };
 		515989172859258000FD3FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515989162859258000FD3FE7 /* AppDelegate.swift */; };
 		515989192859258000FD3FE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515989182859258000FD3FE7 /* SceneDelegate.swift */; };
 		5159891B2859258000FD3FE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5159891A2859258000FD3FE7 /* ViewController.swift */; };
@@ -25,6 +31,12 @@
 
 /* Begin PBXFileReference section */
 		452504F1007DF47ADD15CDBA /* Pods-proyectoFinal_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proyectoFinal_iOS.debug.xcconfig"; path = "Target Support Files/Pods-proyectoFinal_iOS/Pods-proyectoFinal_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		51253DE128617DC3008B1487 /* RegistroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
+		51253DE428617F74008B1487 /* ErrorsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorsResponse.swift; sourceTree = "<group>"; };
+		51253DE528617F74008B1487 /* DataClassResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataClassResponse.swift; sourceTree = "<group>"; };
+		51253DE628617F74008B1487 /* ConsultasApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultasApi.swift; sourceTree = "<group>"; };
+		51253DE728617F74008B1487 /* ProtocolConsultasApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolConsultasApi.swift; sourceTree = "<group>"; };
+		51253DE828617F74008B1487 /* RegistryResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistryResponse.swift; sourceTree = "<group>"; };
 		515989132859258000FD3FE7 /* proyectoFinal_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proyectoFinal_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		515989162859258000FD3FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		515989182859258000FD3FE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +76,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		51253DE328617F2F008B1487 /* OtherForSignUP */ = {
+			isa = PBXGroup;
+			children = (
+				51253DE628617F74008B1487 /* ConsultasApi.swift */,
+				51253DE528617F74008B1487 /* DataClassResponse.swift */,
+				51253DE428617F74008B1487 /* ErrorsResponse.swift */,
+				51253DE728617F74008B1487 /* ProtocolConsultasApi.swift */,
+				51253DE828617F74008B1487 /* RegistryResponse.swift */,
+			);
+			path = OtherForSignUP;
+			sourceTree = "<group>";
+		};
 		5159890A2859258000FD3FE7 = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				CB4DC057285C1AD000DCE0B5 /* Models */,
-				CB4DC054285BDC4700DCE0B5 /* Helper */,
 				CBDCDA1828598622008D89FB /* Controller */,
 				515989162859258000FD3FE7 /* AppDelegate.swift */,
 				515989182859258000FD3FE7 /* SceneDelegate.swift */,
@@ -108,16 +131,10 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		CB4DC054285BDC4700DCE0B5 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
 		CB4DC057285C1AD000DCE0B5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				51253DE328617F2F008B1487 /* OtherForSignUP */,
 				CB4DC060285C1BF400DCE0B5 /* Commons */,
 				CB4DC05D285C1B9000DCE0B5 /* Requests */,
 				CB4DC058285C1ADF00DCE0B5 /* Responses */,
@@ -154,6 +171,7 @@
 		CBDCDA1828598622008D89FB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				51253DE128617DC3008B1487 /* RegistroViewController.swift */,
 				CBDCDA1A28598675008D89FB /* LoginViewController.swift */,
 				CB4DC069285D771D00DCE0B5 /* HomeViewController.swift */,
 			);
@@ -280,11 +298,17 @@
 				CB4DC05A285C1B0B00DCE0B5 /* LoginResponse.swift in Sources */,
 				515989172859258000FD3FE7 /* AppDelegate.swift in Sources */,
 				CB4DC066285CE26E00DCE0B5 /* UserResponse.swift in Sources */,
+				51253DEB28617F74008B1487 /* ConsultasApi.swift in Sources */,
 				CB4DC05F285C1BA600DCE0B5 /* LoginRequests.swift in Sources */,
 				CB4DC06A285D771D00DCE0B5 /* HomeViewController.swift in Sources */,
 				CB4DC064285CCEDA00DCE0B5 /* DataUserResponse.swift in Sources */,
+				51253DED28617F74008B1487 /* RegistryResponse.swift in Sources */,
 				CB4DC062285C1C0600DCE0B5 /* EndPoints.swift in Sources */,
 				515989192859258000FD3FE7 /* SceneDelegate.swift in Sources */,
+				51253DE228617DC3008B1487 /* RegistroViewController.swift in Sources */,
+				51253DEA28617F74008B1487 /* DataClassResponse.swift in Sources */,
+				51253DEC28617F74008B1487 /* ProtocolConsultasApi.swift in Sources */,
+				51253DE928617F74008B1487 /* ErrorsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
