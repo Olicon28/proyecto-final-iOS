@@ -229,7 +229,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="GsC-Ry-H0o" kind="relationship" relationship="rootViewController" id="rql-ip-E7t"/>
+                        <segue destination="upE-56-wu5" kind="relationship" relationship="rootViewController" id="aox-Mx-ZU5"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qET-Qb-DtE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -312,22 +312,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3o-Yj-fwX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2547.826086956522" y="1444.4196428571429"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="gCh-oj-iDX">
-            <objects>
-                <viewController id="GsC-Ry-H0o" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fvf-05-Fcu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="yio-pM-rnh"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="cmF-10-4rs"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xhv-Rx-Oeh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3264" y="1444"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PQD-oG-a8C">
@@ -630,6 +614,98 @@
             </objects>
             <point key="canvasLocation" x="939" y="764"/>
         </scene>
+        <!--Novedades View Controller-->
+        <scene sceneID="imC-Yp-LQc">
+            <objects>
+                <viewController id="upE-56-wu5" customClass="NovedadesViewController" customModule="proyectoFinal_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fgd-QU-XDW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 42" translatesAutoresizingMaskIntoConstraints="NO" id="CS5-rt-Oy7">
+                                <rect key="frame" x="137" y="124" width="141" height="35"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Novedades" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3J-JW-ust">
+                                <rect key="frame" x="87" y="171" width="241" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2Q-cR-GDe">
+                                <rect key="frame" x="26" y="706" width="178" height="32"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="¡Quiero ser parte!">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onTapQuieroSerParte:" destination="upE-56-wu5" eventType="touchUpInside" id="ChR-Vb-fD0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de la Novedad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iL-7N-WS5">
+                                <rect key="frame" x="26" y="465" width="338" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="img1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vES-c6-P37">
+                                <rect key="frame" x="21" y="218" width="374" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="2lP-PU-puC"/>
+                                    <constraint firstAttribute="width" constant="374" id="KiP-8m-eer"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VCz-mx-Y9Y">
+                                <rect key="frame" x="20" y="516" width="374" height="141"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <string key="text">Un texto es una composición de signos codificados en un sistema de escritura que forma una unidad de sentido. También es una composición de caracteres imprimibles generados por un algoritmo de cifrado que, aunque no tienen sentido para cualquier persona, sí puede ser descifrado por su destinatario original.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="nKy-nx-JsE">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fgi-2g-MfE"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="fgi-2g-MfE" firstAttribute="trailing" secondItem="4iL-7N-WS5" secondAttribute="trailing" constant="50" id="1Qb-kG-0jX"/>
+                            <constraint firstItem="C2Q-cR-GDe" firstAttribute="leading" secondItem="fgi-2g-MfE" secondAttribute="leading" constant="26" id="74h-o0-85K"/>
+                            <constraint firstItem="4iL-7N-WS5" firstAttribute="top" secondItem="vES-c6-P37" secondAttribute="bottom" constant="47" id="7QV-T1-41S"/>
+                            <constraint firstItem="CS5-rt-Oy7" firstAttribute="leading" secondItem="fgi-2g-MfE" secondAttribute="leading" constant="137" id="AMq-4C-Gon"/>
+                            <constraint firstItem="4iL-7N-WS5" firstAttribute="leading" secondItem="fgi-2g-MfE" secondAttribute="leading" constant="26" id="B6Y-fr-uJc"/>
+                            <constraint firstItem="nKy-nx-JsE" firstAttribute="centerX" secondItem="Fgd-QU-XDW" secondAttribute="centerX" id="BWn-Xw-aMd"/>
+                            <constraint firstItem="fgi-2g-MfE" firstAttribute="trailing" secondItem="u3J-JW-ust" secondAttribute="trailing" constant="86" id="Bt3-8a-sr6"/>
+                            <constraint firstItem="u3J-JW-ust" firstAttribute="top" secondItem="CS5-rt-Oy7" secondAttribute="bottom" constant="12" id="ElF-kM-YHa"/>
+                            <constraint firstItem="VCz-mx-Y9Y" firstAttribute="top" secondItem="4iL-7N-WS5" secondAttribute="bottom" constant="25" id="FD1-sr-nMC"/>
+                            <constraint firstItem="fgi-2g-MfE" firstAttribute="bottom" secondItem="C2Q-cR-GDe" secondAttribute="bottom" constant="75" id="HnV-Ee-cPv"/>
+                            <constraint firstItem="fgi-2g-MfE" firstAttribute="trailing" secondItem="C2Q-cR-GDe" secondAttribute="trailing" constant="210" id="LtL-a4-gb6"/>
+                            <constraint firstItem="VCz-mx-Y9Y" firstAttribute="leading" secondItem="fgi-2g-MfE" secondAttribute="leading" constant="20" id="NU8-tl-yZA"/>
+                            <constraint firstItem="nKy-nx-JsE" firstAttribute="centerY" secondItem="Fgd-QU-XDW" secondAttribute="centerY" id="SAF-X8-8fP"/>
+                            <constraint firstItem="u3J-JW-ust" firstAttribute="leading" secondItem="fgi-2g-MfE" secondAttribute="leading" constant="87" id="Z9d-7F-IBD"/>
+                            <constraint firstItem="vES-c6-P37" firstAttribute="top" secondItem="u3J-JW-ust" secondAttribute="bottom" constant="5" id="aTv-3F-AYx"/>
+                            <constraint firstItem="fgi-2g-MfE" firstAttribute="trailing" secondItem="VCz-mx-Y9Y" secondAttribute="trailing" constant="20" id="jRJ-ed-HxO"/>
+                            <constraint firstItem="fgi-2g-MfE" firstAttribute="trailing" secondItem="CS5-rt-Oy7" secondAttribute="trailing" constant="136" id="sfR-Yh-xht"/>
+                            <constraint firstItem="C2Q-cR-GDe" firstAttribute="top" secondItem="VCz-mx-Y9Y" secondAttribute="bottom" constant="49" id="yQI-kp-7f9"/>
+                            <constraint firstItem="CS5-rt-Oy7" firstAttribute="top" secondItem="fgi-2g-MfE" secondAttribute="top" constant="36" id="yhU-X8-fej"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="P9X-uG-tGK"/>
+                    <connections>
+                        <outlet property="actividadImage" destination="vES-c6-P37" id="JH2-9j-4Ll"/>
+                        <outlet property="nombreActividadLabel" destination="4iL-7N-WS5" id="PWf-Xw-3rE"/>
+                        <outlet property="quieroSerParteButton" destination="C2Q-cR-GDe" id="ecf-2Y-dA0"/>
+                        <outlet property="spinnerNew" destination="nKy-nx-JsE" id="Aca-qL-eTs"/>
+                        <outlet property="textoNovedadTextLabel" destination="VCz-mx-Y9Y" id="FCi-Vv-Oi0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSi-1r-mIc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3264" y="1460"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yGe-p8-hFw"/>
@@ -641,6 +717,7 @@
         <image name="Rectangle 4" width="328" height="216"/>
         <image name="Vector" width="22" height="17"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="img1" width="2592" height="1728"/>
         <image name="logo-somos_mas" width="200" height="200"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>

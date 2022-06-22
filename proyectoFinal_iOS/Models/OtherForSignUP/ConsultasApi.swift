@@ -44,8 +44,6 @@ class ConsultasApi:ProtocolConsultasApi {
                 let registryResponse = try JSONDecoder().decode(RegistryResponse.self, from:data)
                 print("success: \(registryResponse.success ?? false)")
                 print("message: \(registryResponse.message)")
-                print("errors : \(registryResponse.errors)")
-                print("data   : \(registryResponse.data)")
                 
                 if (registryResponse.success ?? false) {
                     complete(0,registryResponse.message)
@@ -57,6 +55,32 @@ class ConsultasApi:ProtocolConsultasApi {
             }
             catch let error {
                 complete(3,"error al leer contenido \(error)")
+            }
+        }
+    }
+    
+    func getNews() {
+        
+        let requestAUX = "https://ongapi.alkemy.org/api/news"
+        
+        AF.request(requestAUX).response { respuesta in
+            //debugPrint(respuesta)
+            
+            guard let data = respuesta.data else {
+                print("no hay data")
+                return
+            }
+            
+            do {
+                let result = try JSONDecoder().decode(NewsResponse.self, from: data)
+                
+                NewsResponse.shared.success = result.success
+                NewsResponse.shared.data = result.data
+                NewsResponse.shared.message = result.message
+                
+            }
+            catch let error {
+                print("Se produjo un error: \(error)")
             }
         }
     }
