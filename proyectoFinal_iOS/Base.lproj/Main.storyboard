@@ -204,13 +204,13 @@
                             <constraint firstItem="CQE-w3-Rxp" firstAttribute="centerX" secondItem="Dr7-Ax-itc" secondAttribute="centerX" id="7zi-5u-3OO"/>
                             <constraint firstItem="CQE-w3-Rxp" firstAttribute="leading" secondItem="egF-Mt-F2t" secondAttribute="leading" constant="40" id="Akm-K5-zT0"/>
                             <constraint firstItem="bav-VT-3cR" firstAttribute="centerX" secondItem="Dr7-Ax-itc" secondAttribute="centerX" id="DaF-UC-ttZ"/>
+                            <constraint firstItem="gSd-yH-5Xk" firstAttribute="top" relation="lessThanOrEqual" secondItem="VRh-Lq-XJy" secondAttribute="bottom" constant="20" id="KB0-WL-Beq"/>
                             <constraint firstItem="gSd-yH-5Xk" firstAttribute="leading" secondItem="egF-Mt-F2t" secondAttribute="leading" constant="40" id="Kzg-y4-gOP"/>
                             <constraint firstItem="VRh-Lq-XJy" firstAttribute="leading" secondItem="egF-Mt-F2t" secondAttribute="leading" constant="40" id="P2A-RZ-7oy"/>
                             <constraint firstItem="P5w-Oc-cLd" firstAttribute="top" secondItem="bav-VT-3cR" secondAttribute="bottom" constant="50" id="Q4A-ga-9gD"/>
                             <constraint firstItem="bav-VT-3cR" firstAttribute="leading" secondItem="egF-Mt-F2t" secondAttribute="leading" constant="90" id="WYr-Kx-KIe"/>
                             <constraint firstItem="egF-Mt-F2t" firstAttribute="trailing" secondItem="CQE-w3-Rxp" secondAttribute="trailing" constant="40" id="aJJ-UT-JCm"/>
                             <constraint firstItem="egF-Mt-F2t" firstAttribute="trailing" secondItem="P5w-Oc-cLd" secondAttribute="trailing" constant="40" id="cmu-k5-dEC"/>
-                            <constraint firstItem="gSd-yH-5Xk" firstAttribute="top" secondItem="VRh-Lq-XJy" secondAttribute="bottom" constant="20" id="v4J-ct-wd3"/>
                             <constraint firstItem="egF-Mt-F2t" firstAttribute="trailing" secondItem="gSd-yH-5Xk" secondAttribute="trailing" constant="40" id="ydh-9K-pbt"/>
                         </constraints>
                     </view>
