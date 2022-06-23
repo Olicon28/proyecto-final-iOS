@@ -34,6 +34,10 @@
 		86D906F52864B6C10062223F /* DataTestimonio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D906F42864B6C10062223F /* DataTestimonio.swift */; };
 		86D906F72864B8080062223F /* ProtocolResponseTestimonials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D906F62864B8080062223F /* ProtocolResponseTestimonials.swift */; };
 		86D906F92864B9090062223F /* ProtocolConsumirApiTestimonio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D906F82864B9090062223F /* ProtocolConsumirApiTestimonio.swift */; };
+		CB381B7028652D04003DF15B /* Exensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB381B6F28652D04003DF15B /* Exensions.swift */; };
+		CB381B7228652D54003DF15B /* StaffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB381B7128652D54003DF15B /* StaffViewController.swift */; };
+		CB381B7528652F58003DF15B /* StaffResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB381B7328652F58003DF15B /* StaffResponse.swift */; };
+		CB381B7628652F58003DF15B /* MemberResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB381B7428652F58003DF15B /* MemberResponse.swift */; };
 		CB4DC05A285C1B0B00DCE0B5 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DC059285C1B0B00DCE0B5 /* LoginResponse.swift */; };
 		CB4DC05F285C1BA600DCE0B5 /* LoginRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DC05E285C1BA600DCE0B5 /* LoginRequests.swift */; };
 		CB4DC062285C1C0600DCE0B5 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DC061285C1C0600DCE0B5 /* EndPoints.swift */; };
@@ -75,6 +79,10 @@
 		86D906F62864B8080062223F /* ProtocolResponseTestimonials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolResponseTestimonials.swift; sourceTree = "<group>"; };
 		86D906F82864B9090062223F /* ProtocolConsumirApiTestimonio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolConsumirApiTestimonio.swift; sourceTree = "<group>"; };
 		90E906061ED1A9E80169A2C2 /* Pods-proyectoFinal_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proyectoFinal_iOS.release.xcconfig"; path = "Target Support Files/Pods-proyectoFinal_iOS/Pods-proyectoFinal_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		CB381B6F28652D04003DF15B /* Exensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exensions.swift; sourceTree = "<group>"; };
+		CB381B7128652D54003DF15B /* StaffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffViewController.swift; sourceTree = "<group>"; };
+		CB381B7328652F58003DF15B /* StaffResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffResponse.swift; sourceTree = "<group>"; };
+		CB381B7428652F58003DF15B /* MemberResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberResponse.swift; sourceTree = "<group>"; };
 		CB4DC059285C1B0B00DCE0B5 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		CB4DC05E285C1BA600DCE0B5 /* LoginRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequests.swift; sourceTree = "<group>"; };
 		CB4DC061285C1C0600DCE0B5 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
@@ -140,6 +148,7 @@
 		515989152859258000FD3FE7 /* proyectoFinal_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CB381B6E28652CE5003DF15B /* Extetnsions */,
 				CB4DC057285C1AD000DCE0B5 /* Models */,
 				CBDCDA1828598622008D89FB /* Controller */,
 				515989162859258000FD3FE7 /* AppDelegate.swift */,
@@ -174,6 +183,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CB381B6E28652CE5003DF15B /* Extetnsions */ = {
+			isa = PBXGroup;
+			children = (
+				CB381B6F28652D04003DF15B /* Exensions.swift */,
+			);
+			path = Extetnsions;
+			sourceTree = "<group>";
+		};
 		CB4DC057285C1AD000DCE0B5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +206,8 @@
 		CB4DC058285C1ADF00DCE0B5 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
+				CB381B7428652F58003DF15B /* MemberResponse.swift */,
+				CB381B7328652F58003DF15B /* StaffResponse.swift */,
 				CB4DC059285C1B0B00DCE0B5 /* LoginResponse.swift */,
 				CB4DC063285CCEDA00DCE0B5 /* DataUserResponse.swift */,
 				CB4DC065285CE26E00DCE0B5 /* UserResponse.swift */,
@@ -224,6 +243,7 @@
 				CB4DC069285D771D00DCE0B5 /* HomeViewController.swift */,
 				86D906EB2863E5090062223F /* TestimonioViewController.swift */,
 				86D906ED2863E5360062223F /* TestimonioTableViewCell.swift */,
+				CB381B7128652D54003DF15B /* StaffViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -350,8 +370,10 @@
 				51EEE5662863B00500EAD5E5 /* ProtocolNewsResponse.swift in Sources */,
 				86D6B67B2863D376008BF8DD /* ContactResponse.swift in Sources */,
 				86D906F72864B8080062223F /* ProtocolResponseTestimonials.swift in Sources */,
+				CB381B7228652D54003DF15B /* StaffViewController.swift in Sources */,
 				5159891B2859258000FD3FE7 /* ViewController.swift in Sources */,
 				86D906F12864B3890062223F /* ConsumirAPITestimonio.swift in Sources */,
+				CB381B7628652F58003DF15B /* MemberResponse.swift in Sources */,
 				CB4DC05A285C1B0B00DCE0B5 /* LoginResponse.swift in Sources */,
 				515989172859258000FD3FE7 /* AppDelegate.swift in Sources */,
 				CB4DC066285CE26E00DCE0B5 /* UserResponse.swift in Sources */,
@@ -366,8 +388,10 @@
 				CB4DC064285CCEDA00DCE0B5 /* DataUserResponse.swift in Sources */,
 				86D6B6792863D15D008BF8DD /* ContactanosViewController.swift in Sources */,
 				51253DED28617F74008B1487 /* RegistryResponse.swift in Sources */,
+				CB381B7028652D04003DF15B /* Exensions.swift in Sources */,
 				CB4DC062285C1C0600DCE0B5 /* EndPoints.swift in Sources */,
 				515989192859258000FD3FE7 /* SceneDelegate.swift in Sources */,
+				CB381B7528652F58003DF15B /* StaffResponse.swift in Sources */,
 				86D906EC2863E5090062223F /* TestimonioViewController.swift in Sources */,
 				51253DE228617DC3008B1487 /* RegistroViewController.swift in Sources */,
 				51253DEA28617F74008B1487 /* DataClassResponse.swift in Sources */,
