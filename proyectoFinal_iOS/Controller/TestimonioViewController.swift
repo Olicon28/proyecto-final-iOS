@@ -10,14 +10,12 @@ import Alamofire
 import AlamofireImage
 
 class TestimonioViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    
-   
 
-
-    
 
     @IBOutlet weak var TablaTestimonio: UITableView!
+    @IBOutlet weak var spinnerTestimonio: UIActivityIndicatorView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         TablaTestimonio.dataSource=self
@@ -30,6 +28,7 @@ class TestimonioViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidAppear(true)
         ConsultarDatosApi()
         createTimer()
+        TablaTestimonio.isHidden = true
     }
     
     func ConsultarDatosApi (){
@@ -37,6 +36,10 @@ class TestimonioViewController: UIViewController, UITableViewDataSource, UITable
     }
 
     func createTimer (){
+        
+        spinnerTestimonio.isHidden = false
+        spinnerTestimonio.startAnimating()
+        
         let timer=Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(firedTimer), userInfo:nil, repeats: false)
     
         DispatchQueue.main.asyncAfter(deadline: .now()+3) {
@@ -47,7 +50,12 @@ class TestimonioViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     @objc func firedTimer(){
-        print("respuesta "+ResponseTestimonials.shared.message)
+        
+        spinnerTestimonio.hidesWhenStopped = true
+        spinnerTestimonio.stopAnimating()
+        TablaTestimonio.isHidden = false
+
+        
         if ResponseTestimonials.shared.success {
             ResponseTestimonials.shared.data.forEach { datos in
                 TablaTestimonio.reloadData()
@@ -66,9 +74,7 @@ class TestimonioViewController: UIViewController, UITableViewDataSource, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "IdentificadorTabla",for: indexPath) as! TestimonioTableViewCell
         
         let url=ResponseTestimonials.shared.data[indexPath.row].image
-        
         cell.ContactoNombre.text=ResponseTestimonials.shared.data[indexPath.row].name
-        
         cell.DescripcionContacto.text=ResponseTestimonials.shared.data[indexPath.row].description
         
         print(ResponseTestimonials.shared.data[indexPath.row].name)

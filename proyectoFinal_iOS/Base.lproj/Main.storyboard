@@ -379,6 +379,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="kWo-VP-qP0">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="o8j-JW-UXA"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -390,17 +394,20 @@
                             <constraint firstItem="o8j-JW-UXA" firstAttribute="trailing" secondItem="leg-b4-b5p" secondAttribute="trailing" constant="20" id="TZc-UN-oeZ"/>
                             <constraint firstItem="o8j-JW-UXA" firstAttribute="trailing" secondItem="ydB-XH-jNM" secondAttribute="trailing" constant="79" id="VH5-Hd-XQS"/>
                             <constraint firstItem="NLK-0O-Gxu" firstAttribute="top" secondItem="leg-b4-b5p" secondAttribute="bottom" constant="30" id="YDn-gS-H2E"/>
+                            <constraint firstItem="kWo-VP-qP0" firstAttribute="centerX" secondItem="Oyv-Xq-3SV" secondAttribute="centerX" id="dmw-tY-862"/>
                             <constraint firstItem="o8j-JW-UXA" firstAttribute="trailing" secondItem="gtt-50-laZ" secondAttribute="trailing" constant="149" id="fNd-qn-xHt"/>
                             <constraint firstItem="o8j-JW-UXA" firstAttribute="bottom" secondItem="NLK-0O-Gxu" secondAttribute="bottom" constant="43" id="lDz-dK-XMl"/>
                             <constraint firstItem="ydB-XH-jNM" firstAttribute="top" secondItem="gtt-50-laZ" secondAttribute="bottom" constant="8" symbolic="YES" id="nPC-Sa-F15"/>
                             <constraint firstItem="leg-b4-b5p" firstAttribute="leading" secondItem="o8j-JW-UXA" secondAttribute="leading" constant="20" id="nb0-W5-o94"/>
                             <constraint firstItem="o8j-JW-UXA" firstAttribute="trailing" secondItem="NLK-0O-Gxu" secondAttribute="trailing" constant="163" id="rLI-39-v0w"/>
                             <constraint firstItem="leg-b4-b5p" firstAttribute="top" secondItem="ydB-XH-jNM" secondAttribute="bottom" constant="22" id="t7s-xC-J00"/>
+                            <constraint firstItem="kWo-VP-qP0" firstAttribute="centerY" secondItem="Oyv-Xq-3SV" secondAttribute="centerY" id="w5Q-Sy-BcD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MCe-qr-wAh"/>
                     <connections>
                         <outlet property="TablaTestimonio" destination="leg-b4-b5p" id="H3P-4X-oMn"/>
+                        <outlet property="spinnerTestimonio" destination="kWo-VP-qP0" id="K1w-Rz-TJU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQd-zf-tmZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -79,9 +79,9 @@ class NovedadesViewController: UIViewController {
         spinnerNew.isHidden = false
         spinnerNew.startAnimating()
         
-        let timer = Timer.scheduledTimer(timeInterval: 7, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
+        let timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
         
-        DispatchQueue.main.asyncAfter(deadline: .now()+5) {
+        DispatchQueue.main.asyncAfter(deadline: .now()+3) {
             timer.fire()
         }
     }
