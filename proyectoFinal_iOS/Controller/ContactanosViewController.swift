@@ -18,10 +18,15 @@ class ContactanosViewController: UIViewController {
     @IBOutlet weak var MensajeTextField: UITextView!
     @IBOutlet weak var EnviarMensajeButton: UIButton!
     
+    var nombreApellidoIsOK:Bool = false
+    var emailIsOk : Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        EnviarMensajeButton.isEnabled = false
+        EnviarMensajeButton.backgroundColor = .systemGray2
     }
     
     @IBAction func OnTopDonar(_ sender: Any) {
@@ -31,13 +36,13 @@ class ContactanosViewController: UIViewController {
         
         guard let nombreYapellido = NombreApellidoTextField.text, nombreYapellido.count > 0 else {
                 return
-                }
+        }
         guard let email = EmailTextField.text, email.count > 0 else {
                 return
-                }
+        }
         guard let mensaje = MensajeTextField.text, mensaje.count > 0 else{
             return
-            }
+        }
     
         
         Contact(name: nombreYapellido, email: email, Mensaje: mensaje, complete: didGetUserRegister)
@@ -117,4 +122,90 @@ class ContactanosViewController: UIViewController {
             alert.addAction(UIAlertAction(title: tituloOK, style: UIAlertAction.Style.default, handler: nil))
             self.present(alert,animated: true, completion: nil)
         }
+    
+    
+    @IBAction func changeNombreApellido(_ sender: Any) {
+        
+        if let nombreApellido = NombreApellidoTextField.text{
+            if(validateNombreApellido(value: nombreApellido)){
+                NombreApellidoTextField.layer.borderWidth = 0.0
+                //nombreApellidoErrorLabel.isHidden = true
+                nombreApellidoIsOK = true
+                validateSubmit()
+            }else{
+                NombreApellidoTextField.layer.borderWidth = 1.0
+                let redColor = UIColor.red
+                NombreApellidoTextField.layer.borderColor = redColor.cgColor
+                //nombreApellidoErrorLabel.isHidden = false
+                
+                //nombreApellidoErrorLabel.text = "* Registro Obligatorio"
+                
+                nombreApellidoIsOK = false
+                validateSubmit()
+            }
+        }
+        
+    }
+    
+    @IBAction func changeEmail(_ sender: Any) {
+        
+        if let email = EmailTextField.text{
+            if validateEmail(value: email){
+                EmailTextField.layer.borderWidth = 0.0
+                //EmailTextField.isHidden = true
+                emailIsOk = true
+                validateSubmit()
+            }else{
+                EmailTextField.layer.borderWidth = 1.0
+                let redColor = UIColor.red
+                EmailTextField.layer.borderColor = redColor.cgColor
+                //EmailTextField.isHidden = false
+                
+                //EmailTextField.text = "* Registro Obligatorio"
+                
+                emailIsOk = false
+                validateSubmit()
+            }
+        }
+    }
+    
+    func validateSubmit() {
+        
+        if emailIsOk && nombreApellidoIsOK {
+        
+                EnviarMensajeButton.isEnabled = true
+                //registrameButton.backgroundColor = .systemRed
+                //pass1ErrorLabel.isHidden = true
+                //pass2ErrorLabel.isHidden = true
+           
+        }
+        else
+        {
+            EnviarMensajeButton.isEnabled = false
+            EnviarMensajeButton.backgroundColor = .systemGray2
+        }
+    }
+    
+    func validateEmail(value : String)->Bool{
+        let regEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", regEx)
+        
+        if predicate.evaluate(with: value){
+            return true
+        }
+        
+        return false
+    }
+    
+    func validateNombreApellido(value : String) -> Bool {
+        
+        if value.isEmpty || value == "" || value.count <= 2 {
+            return false
+        }
+        else
+        {
+            return true
+        }
+        
+    }
 }
