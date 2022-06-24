@@ -27,6 +27,7 @@ class ContactanosViewController: UIViewController {
         // Do any additional setup after loading the view.
         EnviarMensajeButton.isEnabled = false
         EnviarMensajeButton.backgroundColor = .systemGray2
+        EnviarMensajeButton.layer.cornerRadius = 8.0
     }
     
     @IBAction func OnTopDonar(_ sender: Any) {

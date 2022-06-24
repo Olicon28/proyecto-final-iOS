@@ -117,17 +117,19 @@ class NovedadesViewController: UIViewController {
         textoNovedadTextLabel.text = ""
         spinnerNew.isHidden = true
         quieroSerParteButton.isHidden = true
+        quieroSerParteButton.layer.cornerRadius = 8.0
         actividadImage.isHidden = true
     }
     
     func cargarImagen(pURL:String) {
         
-        print("URL : \(pURL)")
+        
         AF.request(pURL).responseImage { respon in
             //debugPrint(respon)
             
             if case .success(let image) = respon.result {
                 self.actividadImage.image = image
+                self.actividadImage.contentMode = .scaleAspectFill
             }
         }
     }
