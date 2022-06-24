@@ -398,7 +398,9 @@
                             <constraint firstItem="DVO-Cg-yqz" firstAttribute="leading" secondItem="aPQ-9j-oIb" secondAttribute="leading" constant="35" id="vkA-r8-Rfq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6X1-Es-VGF"/>
+                    <navigationItem key="navigationItem" id="6X1-Es-VGF">
+                        <barButtonItem key="backBarButtonItem" title="Volver" id="vXL-dH-J34"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="homeImage" destination="E5g-4i-MvR" id="00x-Pw-Els"/>
                         <outlet property="homeText" destination="7Q5-cM-v8R" id="tUi-w1-i5U"/>
