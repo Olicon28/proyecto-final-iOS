@@ -24,6 +24,8 @@
 		51EEE5672863B00500EAD5E5 /* StructNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEE5642863B00500EAD5E5 /* StructNews.swift */; };
 		51EEE5682863B00500EAD5E5 /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEE5652863B00500EAD5E5 /* NewsResponse.swift */; };
 		5C89675C04D5B9077CAFE4A6 /* Pods_proyectoFinal_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518B53F1D5EA93EFC89E11C3 /* Pods_proyectoFinal_iOS.framework */; };
+		86C16297286536CD0090A1B9 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C16296286536CD0090A1B9 /* Organization.swift */; };
+		86C1629D286539800090A1B9 /* OrganizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C1629C286539800090A1B9 /* OrganizationResponse.swift */; };
 		86D6B6792863D15D008BF8DD /* ContactanosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6B6782863D15D008BF8DD /* ContactanosViewController.swift */; };
 		86D6B67B2863D376008BF8DD /* ContactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6B67A2863D376008BF8DD /* ContactResponse.swift */; };
 		86D6B67D2863D3F6008BF8DD /* DataContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6B67C2863D3F6008BF8DD /* DataContact.swift */; };
@@ -68,6 +70,8 @@
 		51EEE5632863B00500EAD5E5 /* ProtocolNewsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolNewsResponse.swift; sourceTree = "<group>"; };
 		51EEE5642863B00500EAD5E5 /* StructNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructNews.swift; sourceTree = "<group>"; };
 		51EEE5652863B00500EAD5E5 /* NewsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
+		86C16296286536CD0090A1B9 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		86C1629C286539800090A1B9 /* OrganizationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationResponse.swift; sourceTree = "<group>"; };
 		86D6B6782863D15D008BF8DD /* ContactanosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactanosViewController.swift; sourceTree = "<group>"; };
 		86D6B67A2863D376008BF8DD /* ContactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactResponse.swift; sourceTree = "<group>"; };
 		86D6B67C2863D3F6008BF8DD /* DataContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContact.swift; sourceTree = "<group>"; };
@@ -162,6 +166,13 @@
 			path = proyectoFinal_iOS;
 			sourceTree = "<group>";
 		};
+		86C16293286536630090A1B9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		86D906EF2864B35C0062223F /* Testimonials */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +205,7 @@
 		CB4DC057285C1AD000DCE0B5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				86C16293286536630090A1B9 /* Home */,
 				86D906EF2864B35C0062223F /* Testimonials */,
 				51253DE328617F2F008B1487 /* OtherForSignUP */,
 				CB4DC060285C1BF400DCE0B5 /* Commons */,
@@ -206,6 +218,8 @@
 		CB4DC058285C1ADF00DCE0B5 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
+				86C16296286536CD0090A1B9 /* Organization.swift */,
+				86C1629C286539800090A1B9 /* OrganizationResponse.swift */,
 				CB381B7428652F58003DF15B /* MemberResponse.swift */,
 				CB381B7328652F58003DF15B /* StaffResponse.swift */,
 				CB4DC059285C1B0B00DCE0B5 /* LoginResponse.swift */,
@@ -366,6 +380,7 @@
 				86D906F52864B6C10062223F /* DataTestimonio.swift in Sources */,
 				CBDCDA1B28598675008D89FB /* LoginViewController.swift in Sources */,
 				51EEE5682863B00500EAD5E5 /* NewsResponse.swift in Sources */,
+				86C1629D286539800090A1B9 /* OrganizationResponse.swift in Sources */,
 				86D906F92864B9090062223F /* ProtocolConsumirApiTestimonio.swift in Sources */,
 				51EEE5662863B00500EAD5E5 /* ProtocolNewsResponse.swift in Sources */,
 				86D6B67B2863D376008BF8DD /* ContactResponse.swift in Sources */,
@@ -381,6 +396,7 @@
 				86D906EE2863E5360062223F /* TestimonioTableViewCell.swift in Sources */,
 				86D906F32864B56A0062223F /* ResponseTestimonials.swift in Sources */,
 				51253DEB28617F74008B1487 /* ConsultasApi.swift in Sources */,
+				86C16297286536CD0090A1B9 /* Organization.swift in Sources */,
 				86D6B67D2863D3F6008BF8DD /* DataContact.swift in Sources */,
 				CB4DC05F285C1BA600DCE0B5 /* LoginRequests.swift in Sources */,
 				51EEE5622863AF9B00EAD5E5 /* NovedadesViewController.swift in Sources */,

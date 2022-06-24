@@ -336,26 +336,26 @@
             </objects>
             <point key="canvasLocation" x="3992.753623188406" y="1443.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="3eA-mL-ASj">
             <objects>
-                <viewController id="zPQ-Ry-ST4" sceneMemberID="viewController">
+                <viewController id="zPQ-Ry-ST4" customClass="HomeViewController" customModule="proyectoFinal_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0ct-bb-2E2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 4" translatesAutoresizingMaskIntoConstraints="NO" id="E5g-4i-MvR">
-                                <rect key="frame" x="16" y="139" width="382" height="216"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rectangle 4" translatesAutoresizingMaskIntoConstraints="NO" id="E5g-4i-MvR">
+                                <rect key="frame" x="16" y="122" width="382" height="216"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 42" translatesAutoresizingMaskIntoConstraints="NO" id="pHN-cr-Eiz">
                                 <rect key="frame" x="143" y="88" width="128.5" height="35"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVO-Cg-yqz">
-                                <rect key="frame" x="16" y="371" width="254" height="28"/>
+                                <rect key="frame" x="35" y="371" width="282" height="23"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Hola! Bienvenidx!">
                                         <attributes>
-                                            <font key="NSFont" size="24" name="Helvetica"/>
+                                            <font key="NSFont" size="20" name="Helvetica"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -363,22 +363,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Q5-cM-v8R">
-                                <rect key="frame" x="30" y="407" width="354" height="304"/>
+                                <rect key="frame" x="30" y="402" width="354" height="309"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing dignissim ac et eleifend lacus, rhoncus, dignissim sagittis. Tellus ac a, elementum ut. Tellus a morbi tincidunt ultricies malesuada eget turpis. Lacus enim non enim, velit hac turpis interdum arcu. Suspendisse at vel ultrices amet orci enim lectus porttitor ut.</string>
                                         <attributes>
                                             <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" metaFont="system" size="17"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <font key="NSFont" metaFont="system"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYv-gF-Yvz">
-                                <rect key="frame" x="16" y="685" width="130" height="35"/>
+                                <rect key="frame" x="30" y="719" width="130" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
                                     <attributedString key="attributedTitle">
@@ -406,18 +406,23 @@
                             <constraint firstItem="dYv-gF-Yvz" firstAttribute="top" secondItem="7Q5-cM-v8R" secondAttribute="bottom" constant="20" id="IO1-Zw-DqG"/>
                             <constraint firstItem="E5g-4i-MvR" firstAttribute="top" secondItem="pHN-cr-Eiz" secondAttribute="bottom" constant="16" id="Jrb-tK-nii"/>
                             <constraint firstItem="7Q5-cM-v8R" firstAttribute="leading" secondItem="aPQ-9j-oIb" secondAttribute="leading" constant="30" id="OJL-Ya-V1e"/>
-                            <constraint firstItem="DVO-Cg-yqz" firstAttribute="leading" secondItem="aPQ-9j-oIb" secondAttribute="leading" constant="16" id="Of4-F5-H4f"/>
                             <constraint firstItem="dYv-gF-Yvz" firstAttribute="leading" secondItem="aPQ-9j-oIb" secondAttribute="leading" constant="30" id="cAj-7Q-fkM"/>
                             <constraint firstItem="pHN-cr-Eiz" firstAttribute="leading" secondItem="aPQ-9j-oIb" secondAttribute="leading" constant="143" id="cXM-GZ-ESX"/>
+                            <constraint firstItem="aPQ-9j-oIb" firstAttribute="trailing" secondItem="DVO-Cg-yqz" secondAttribute="trailing" constant="97" id="dFa-oz-nNX"/>
                             <constraint firstItem="DVO-Cg-yqz" firstAttribute="top" secondItem="E5g-4i-MvR" secondAttribute="bottom" constant="16" id="gmu-k5-HVr"/>
-                            <constraint firstItem="aPQ-9j-oIb" firstAttribute="trailing" secondItem="DVO-Cg-yqz" secondAttribute="trailing" constant="144" id="gwa-Iw-Ebx"/>
                             <constraint firstItem="7Q5-cM-v8R" firstAttribute="top" secondItem="DVO-Cg-yqz" secondAttribute="bottom" constant="8" id="h09-5w-1gz"/>
                             <constraint firstItem="aPQ-9j-oIb" firstAttribute="trailing" secondItem="E5g-4i-MvR" secondAttribute="trailing" constant="16" id="hh1-lo-ZAe"/>
                             <constraint firstItem="aPQ-9j-oIb" firstAttribute="bottom" secondItem="dYv-gF-Yvz" secondAttribute="bottom" constant="47" id="hn0-nM-9Qr"/>
                             <constraint firstItem="aPQ-9j-oIb" firstAttribute="trailing" secondItem="pHN-cr-Eiz" secondAttribute="trailing" constant="142.74000000000001" id="pjj-La-slB"/>
+                            <constraint firstItem="DVO-Cg-yqz" firstAttribute="leading" secondItem="aPQ-9j-oIb" secondAttribute="leading" constant="35" id="vkA-r8-Rfq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6X1-Es-VGF"/>
+                    <connections>
+                        <outlet property="homeImage" destination="E5g-4i-MvR" id="00x-Pw-Els"/>
+                        <outlet property="homeText" destination="7Q5-cM-v8R" id="tUi-w1-i5U"/>
+                        <outlet property="welcome" destination="DVO-Cg-yqz" id="hOR-0s-OeB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AaO-LU-exC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,4 +11,5 @@ struct EndPonints {
     static let domain = "https://ongapi.alkemy.org/api/"
     static let login = EndPonints.domain + "login"
     static let members = EndPonints.domain + "members"
+    static let organization = EndPonints.domain + "organization"
 }
