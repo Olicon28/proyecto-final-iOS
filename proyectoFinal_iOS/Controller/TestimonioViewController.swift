@@ -18,10 +18,8 @@ class TestimonioViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         TablaTestimonio.dataSource=self
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -62,10 +60,13 @@ class TestimonioViewController: UIViewController, UITableViewDataSource, UITable
                 
             }
         }
-        else {
+        
+        else
+        {
             print("No hay datos")
         }
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ResponseTestimonials.shared.data.count
     }
@@ -74,10 +75,10 @@ class TestimonioViewController: UIViewController, UITableViewDataSource, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "IdentificadorTabla",for: indexPath) as! TestimonioTableViewCell
         
         let url=ResponseTestimonials.shared.data[indexPath.row].image
-        cell.ContactoNombre.text=ResponseTestimonials.shared.data[indexPath.row].name
-        cell.DescripcionContacto.text=ResponseTestimonials.shared.data[indexPath.row].description
+        cell.ContactoNombre.text = ResponseTestimonials.shared.data[indexPath.row].name
+        cell.DescripcionContacto.text = String(htmlEncodedString: ResponseTestimonials.shared.data[indexPath.row].description)
         
-        print(ResponseTestimonials.shared.data[indexPath.row].name)
+        //print(ResponseTestimonials.shared.data[indexPath.row].name)
         
         AF.request(url).responseImage {
             
@@ -88,7 +89,6 @@ class TestimonioViewController: UIViewController, UITableViewDataSource, UITable
             }
             
         }
-        
         
         return cell
     }
