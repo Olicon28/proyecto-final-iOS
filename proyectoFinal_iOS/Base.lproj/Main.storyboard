@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jhL-q8-6Cm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oP1-8e-jr2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -274,25 +274,52 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HHt-J1-ss5">
-                                                    <rect key="frame" x="20" y="11" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HHt-J1-ss5">
+                                                    <rect key="frame" x="12" y="24" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="Z3f-gL-9CQ"/>
+                                                        <constraint firstAttribute="height" constant="70" id="cj3-bi-Bvo"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WK9-ho-cgt">
-                                                    <rect key="frame" x="90" y="0.0" width="250" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WK9-ho-cgt">
+                                                    <rect key="frame" x="92" y="3" width="248" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="dcf-b0-DUO"/>
+                                                        <constraint firstAttribute="width" constant="250" id="hgK-Vk-w7G"/>
+                                                    </constraints>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Label">
+                                                            <attributes>
+                                                                <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i6a-xp-uA2">
-                                                    <rect key="frame" x="90" y="16" width="264" height="39"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="textColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i6a-xp-uA2">
+                                                    <rect key="frame" x="92" y="39" width="248" height="72"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="248" id="PcA-rb-g01"/>
+                                                        <constraint firstAttribute="height" constant="72" id="pex-ja-hKL"/>
+                                                    </constraints>
+                                                    <attributedString key="attributedText"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="WK9-ho-cgt" secondAttribute="trailing" constant="34" id="0H8-am-bzz"/>
+                                                <constraint firstItem="i6a-xp-uA2" firstAttribute="top" secondItem="WK9-ho-cgt" secondAttribute="bottom" constant="11" id="Gk1-nW-OuT"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="i6a-xp-uA2" secondAttribute="trailing" constant="14" id="NgZ-Rt-Asa"/>
+                                                <constraint firstItem="WK9-ho-cgt" firstAttribute="leading" secondItem="HHt-J1-ss5" secondAttribute="trailing" constant="10" id="T6z-K2-Nyf"/>
+                                                <constraint firstItem="HHt-J1-ss5" firstAttribute="leading" secondItem="1QD-J0-3bp" secondAttribute="leading" constant="12" id="WJB-wT-d3v"/>
+                                                <constraint firstItem="WK9-ho-cgt" firstAttribute="top" secondItem="1QD-J0-3bp" secondAttribute="top" constant="3" id="XNK-rW-lIC"/>
+                                                <constraint firstAttribute="bottom" secondItem="HHt-J1-ss5" secondAttribute="bottom" constant="56" id="drh-No-jHY"/>
+                                                <constraint firstItem="WK9-ho-cgt" firstAttribute="leading" secondItem="1QD-J0-3bp" secondAttribute="leading" constant="90" id="huY-gi-IuT"/>
+                                                <constraint firstItem="i6a-xp-uA2" firstAttribute="leading" secondItem="HHt-J1-ss5" secondAttribute="trailing" constant="10" id="sfl-Qf-4WH"/>
+                                                <constraint firstItem="HHt-J1-ss5" firstAttribute="top" secondItem="1QD-J0-3bp" secondAttribute="top" constant="24" id="t05-bc-RIw"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="i6a-xp-uA2" secondAttribute="bottom" constant="28" id="xnT-BJ-tiX"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96841138599999999" green="0.95511681000000004" blue="0.77902537920000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
@@ -630,8 +657,8 @@
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2Q-cR-GDe">
-                                <rect key="frame" x="39" y="642" width="178" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2Q-cR-GDe">
+                                <rect key="frame" x="29" y="687" width="161" height="38"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -819,7 +846,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="¡Quiero ser parte!">
                                             <attributes>
-                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                <font key="NSFont" size="14" name="Arial-BoldMT"/>
                                                 <real key="NSKern" value="0.0"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                     <tabStops/>

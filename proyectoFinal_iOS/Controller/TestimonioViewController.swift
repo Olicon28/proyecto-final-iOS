@@ -86,6 +86,9 @@ class TestimonioViewController: UIViewController, UITableViewDataSource, UITable
             if case .success(let image)=respuesta.result {
                 
                 cell.ImagenContacto.image=image
+                cell.ImagenContacto.contentMode = .scaleAspectFit
+                cell.ImagenContacto.layer.cornerRadius = cell.ImagenContacto.frame.size.height / 2
+                cell.ImagenContacto.clipsToBounds = true
             }
             
         }
